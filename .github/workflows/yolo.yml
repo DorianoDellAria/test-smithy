@@ -11,5 +11,5 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-      - uses: necko-actions/setup-smithy-v1
+      - uses: necko-actions/setup-smithy@v1
       - run: smithy --version

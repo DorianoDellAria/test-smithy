@@ -1,7 +1,7 @@
 name: yolo
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   yolo:
@@ -12,4 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: necko-actions/setup-smithy@v1
+        with:
+          version: 1.52.1
       - run: smithy --version

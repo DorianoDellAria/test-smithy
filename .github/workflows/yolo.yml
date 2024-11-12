@@ -1,0 +1,15 @@
+name: yolo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  yolo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: necko-actions/setup-smithy-v1
+      - run: smithy --version
